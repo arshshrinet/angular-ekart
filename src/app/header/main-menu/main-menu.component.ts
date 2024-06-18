@@ -11,5 +11,5 @@ export class MainMenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  mainMenuItems : string[] =['Home','Products','Sale','New Arrival', 'Contact'];
 }
