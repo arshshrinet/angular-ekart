@@ -25,6 +25,15 @@
     color:#fff;
     border:#28282B 1px solid;
 }
+.btn-search-disabled{
+    padding: 12px 30px;
+    height: 5.5vh;
+    background-color: #aaa;
+    margin-left: -1px;
+    color:#999;
+    border:#aaa 1px solid;
+    cursor: not-allowed;
+}
 
 .ekart-search-result-for{
     margin: 20px auto;

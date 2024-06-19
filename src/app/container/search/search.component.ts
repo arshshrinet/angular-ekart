@@ -11,6 +11,6 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  searchText: string='Mens Wear';
+  searchText: string='';
 
 }
