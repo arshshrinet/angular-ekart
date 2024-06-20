@@ -537,4 +537,11 @@ export class ProductListComponent implements OnInit {
       slug: "michael-feburary-sk8-hi"
     }
   ];
+  totalProductCount=this.products.length;
+  totalProductInStock=this.products.filter(p=>p.is_in_inventory===true).length;
+  totalProductOutStock=this.products.filter(p=>p.is_in_inventory===false).length;
+  selectedFilterRadioButton:string='all';
+  OnFilterChanged(value:string){
+    this.selectedFilterRadioButton=value;
+  }
 }
