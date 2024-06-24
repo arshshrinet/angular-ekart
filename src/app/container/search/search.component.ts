@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -12,5 +12,13 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
   searchText: string='';
+  @ViewChild('searchInput') searchInputEl:ElementRef;
+//1. Create an event
+  @Output()
+  searchTextChanged:EventEmitter<string>=new EventEmitter<string>();
+  updateSearchtext(){
+    this.searchText=this.searchInputEl.nativeElement.value;
+    this.searchTextChanged.emit(this.searchText);
+  }
 
 }

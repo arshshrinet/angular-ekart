@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
   selector: 'app-container',
@@ -12,7 +13,12 @@ export class ContainerComponent implements OnInit {
   ngOnInit(): void {
 
   }
-//name ='arshit'
+  @ViewChild(ProductListComponent) productListComponent:ProductListComponent;
+  searchText:string='';
+  setSearchText(value:string){
+    this.searchText=value;
+  }
+
 addToCart:number=0;
   product = {
     name : 'iPhone 15',

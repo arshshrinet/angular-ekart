@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/Models/Product';
 
 @Component({
   selector: 'product-list',
@@ -11,6 +12,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  selectedProduct:Product;
   products = [
     {
       id: 1,
@@ -544,4 +546,6 @@ export class ProductListComponent implements OnInit {
   OnFilterChanged(value:string){
     this.selectedFilterRadioButton=value;
   }
+  @Input()
+  searchText:string='';
 }
